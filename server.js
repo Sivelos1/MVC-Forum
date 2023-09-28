@@ -4,6 +4,7 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 const helpers = require('./utils/helpers');
+const uuid = require('./node_modules/uuid').v4;
 
 const sequelize = require('./config/connection');
 
@@ -17,7 +18,7 @@ const hbs = exphbs.create({ helpers });
 
 // TODO: Add a comment describing the functionality of this object
 const sess = {
-  secret: 'Super secret secret',
+  secret: uuid(),
   cookie: {},
   resave: false,
   saveUninitialized: true,
