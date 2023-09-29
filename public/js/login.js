@@ -27,8 +27,7 @@ const signUpFormHandler = async (event) => {
   const email = document.querySelector('#email-signup').value.trim();
   const password = document.querySelector('#password-signup').value.trim();
 
-  if (email && password) {
-    // TODO: Add a comment describing the functionality of this expression
+  if (username && email && password) {
     const response = await fetch('/api/users/signup', {
       method: 'POST',
       body: JSON.stringify({ username, email, password }),
@@ -49,4 +48,4 @@ document
 
 document
 .querySelector('.signup-form')
-.addEventListener('submit', loginFormHandler);
+.addEventListener('submit', signUpFormHandler);
