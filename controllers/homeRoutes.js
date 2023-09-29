@@ -28,6 +28,7 @@ router.get('/login', (req, res) => {
   }
 
   res.render('login');
+  res.render('signup');
 });
 
 module.exports = router;
