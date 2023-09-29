@@ -16,6 +16,10 @@ Comment.init(
         type: DataTypes.STRING,
         allowNull: false,
     },
+    time: {
+        type: DataTypes.TIME,
+        allowNull: false,
+    },
     author: { //id of comment author
         type: DataTypes.INTEGER,
         allowNull: false,

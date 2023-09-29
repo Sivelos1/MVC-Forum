@@ -20,6 +20,10 @@ Post.init(
         type: DataTypes.STRING,
         allowNull: false,
     },
+    time: {
+        type: DataTypes.TIME,
+        allowNull: false,
+    },
     author: {
         type: DataTypes.INTEGER,
         allowNull: false,
