@@ -1,0 +1,42 @@
+<div>
+    <div style = "display: flex; justify-content: space-between">
+        <h2>
+            {{title}}
+        </h2>
+        <div>
+            {{time}}
+        </div>
+    </div>
+    <div>
+        <p> 
+            {{content}}
+        </p>
+    </div>
+    <div style = "display: flex; justify-content: space-between">
+        <div>
+            {{#if is_on_dashboard}}
+                {{comment-count}} comment(s)
+            {{/if}}
+        </div>
+        <div>
+            {{#if is_users_post}}
+                <div style = "display:flex;">
+                    <a href = "#">
+                        Edit Post
+                    </a>
+                </div>
+            {{/if}}
+        </div>
+    </div>
+    <div>
+        {{#if show_comments}}
+            {{#each comments as |comment| }}
+            <div class="row align-center mb-5">
+                <div class="col-md-6">
+                <h2>this is a post my boy</h2>
+                </div>
+            </div>
+            {{/each}}
+        {{/if}}
+    </div>
+</div>
