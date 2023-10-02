@@ -5,7 +5,6 @@ const newPostHandler = async (event) => {
   const content = document.querySelector('#post-content').value.trim();
 
   if (title && content) {
-    // TODO: Add a comment describing the functionality of this expression
     const response = await fetch('/api/post/newPost', {
       method: 'POST',
       body: JSON.stringify({ title, content }),
@@ -13,7 +12,7 @@ const newPostHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/');
+      document.location = '/';
     } else {
       alert('Failed to create post');
     }
@@ -22,7 +21,7 @@ const newPostHandler = async (event) => {
 const cancelHandler = async (event) => {
   event.preventDefault();
 
-  document.location.replace('/');
+  document.location='/';
 };
 
 document
