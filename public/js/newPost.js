@@ -27,7 +27,7 @@ const cancelHandler = async (event) => {
 
 document
   .querySelector('#submit-button')
-  .addEventListener('submit', loginFormHandler);
+  .addEventListener('submit', newPostHandler);
 
 document
 .querySelector('.#cancel-button')
