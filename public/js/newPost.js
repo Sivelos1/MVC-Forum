@@ -30,5 +30,5 @@ document
   .addEventListener('submit', newPostHandler);
 
 document
-.querySelector('.#cancel-button')
+.querySelector('#cancel-button')
 .addEventListener('submit', cancelHandler);
