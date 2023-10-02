@@ -1,7 +1,8 @@
+const newPostButton = document.querySelector('#makeNewPost');
+
 const makeNewPostHandler = async (event) => {
   event.preventDefault();
   document.location.replace('/newPost');
 };
-document
-  .querySelector('#makeNewPost')
-  .addEventListener('submit', makeNewPostHandler);
+
+newPostButton.addEventListener('submit', makeNewPostHandler);
