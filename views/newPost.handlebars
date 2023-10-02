@@ -3,14 +3,12 @@
     <h2>Create A New Post</h2>
 
     <form class="form new-post">
-      {{#if is_post}}
       <div class="form-group">
-        <label for="email-login">Title:</label>
-        <input class="form-input" type="text" id="email-login"/>
+        <label for="post-title">Title:</label>
+        <input class="form-input" type="text" id="post-title"/>
       </div>
-      {{/if}}
       <div class="form-group">
-        <input class="form-input" type="password" id="password-login" />
+        <input class="form-input" type="text" id="post-content" />
       </div>
       <div style = "display:flex; justify-content: space-between">
         <div class="form-group">
