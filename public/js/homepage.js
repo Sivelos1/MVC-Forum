@@ -6,3 +6,4 @@ const makeNewPostHandler = async (event) => {
 };
 
 newPostButton.addEventListener('submit', makeNewPostHandler);
+

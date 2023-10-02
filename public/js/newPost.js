@@ -12,7 +12,10 @@ const newPostHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location = '/';
+      await fetch('/', {
+        method: 'GET',
+        headers: {'Content-Type': 'application/json'}
+      })
     } else {
       alert('Failed to create post');
     }
