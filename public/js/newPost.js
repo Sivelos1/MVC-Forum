@@ -25,9 +25,9 @@ const cancelHandler = async (event) => {
 };
 
 document
-  .querySelector('#submit-button')
+  .querySelector('.submit-group')
   .addEventListener('submit', newPostHandler);
 
 document
-.querySelector('#cancel-button')
+.querySelector('.cancel-group')
 .addEventListener('submit', cancelHandler);
