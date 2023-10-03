@@ -16,7 +16,6 @@ postList.forEach(element => {
     const response = fetch('/api/post/'+element.id,
     {
       method: 'GET',
-      headers: { 'Content-Type': 'application/json' },
     });
     if(response.ok){
       document.location.replace('/');
