@@ -1,6 +1,6 @@
 const newPostHandler = async (event) => {
   event.preventDefault();
-
+  console.log("we prevented the default my boy")
   const title = document.querySelector('#post-title').value.trim();
   const content = document.querySelector('#post-content').value.trim();
 
