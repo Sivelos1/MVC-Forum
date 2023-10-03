@@ -47,8 +47,12 @@ router.get('/posts/:id', withAuth, async (req, res) => {
     ],
   })
   if(postInfo){
+    const comments = await Comment.findAll({where: {
+      id: req.params.id
+    }})
     res.render('post', {
       post: postInfo.get({ plain: true }),
+      comments: comments.get({plain: true}),
       is_on_dashboard: true,
       is_users_post: (postInfo.author === req.session.user_id),
       show_comments: true,
