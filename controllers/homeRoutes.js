@@ -47,7 +47,7 @@ router.get('/posts/:id', withAuth, async (req, res) => {
     ],
   })
   if(postInfo){
-    res.render('homepage', {
+    res.render('post', {
       postInfo,
       is_on_dashboard: true,
       is_users_post: (postInfo.author === req.session.user_id),
