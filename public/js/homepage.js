@@ -13,8 +13,10 @@ const postList = document.querySelectorAll('.posts');
 postList.forEach(element => {
   element.addEventListener('click', function(event){
     event.preventDefault();
-    const response = fetch('/api/post/'+element.id, function(){
-      
-    })
+    const response = fetch('/api/post/'+element.id,
+    {
+      method: 'GET',
+      headers: { 'Content-Type': 'application/json' },
+    });
   })
 });
