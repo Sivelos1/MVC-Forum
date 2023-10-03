@@ -1,5 +1,3 @@
-console.log("are you slapping")
-
 const newPostHandler = async (event) => {
   event.preventDefault();
   alert('AAAAAAAAAAAAA');
@@ -26,12 +24,12 @@ const cancelHandler = async (event) => {
   document.location.replace('/');
 };
 
-document.querySelector('#submit-button').addEventListener('submit', function(event){
+document.querySelector('.submit-group').addEventListener('submit', function(event){
   event.preventDefault();
   newPostHandler(event);
 });
 
-document.querySelector('#cancel-button').addEventListener('submit', function(event){
+document.querySelector('.cancel-group').addEventListener('submit', function(event){
   event.preventDefault();
   cancelHandler(event);
 });
