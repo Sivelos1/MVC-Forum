@@ -42,16 +42,18 @@ router.get('/posts/:id', withAuth, async (req, res) => {
   const postInfo = await Post.findByPk(req.params.id, {
     include: [
       {
-        model: Comment
+        model: Comment,
       },
     ],
   })
   if(postInfo){
+    const commentCount = await Comment.findAndCountAll({where: id === req.params.id})
     res.render('post', {
       post: postInfo.get({ plain: true }),
       is_on_dashboard: true,
       is_users_post: (postInfo.author === req.session.user_id),
       show_comments: true,
+      comment_count: commentCount,
       logged_in: req.session.logged_in,
     });
     res.status(200);
