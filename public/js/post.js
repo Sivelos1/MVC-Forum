@@ -3,11 +3,9 @@ const commentBox = document.querySelector('.comment-box');
 const newCommentHandler = async (event) => {
   event.preventDefault();
 
-  const id = document.querySelector('#id').value;
+  const id = document.querySelector('#id').value.trim();
   const content = document.querySelector('#comment-content').value.trim();
-  console.log(id + '/' + content)
   if (id && content) {
-    console.log("and we did it!!")
     const response = await fetch('/api/post/newComment/'+id, {
       method: 'POST',
       body: JSON.stringify({ 
