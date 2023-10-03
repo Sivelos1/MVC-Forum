@@ -16,6 +16,22 @@ router.post('/newPost', async (req, res) => {
   }
 });
 
+router.post('/newComment/:id', async (req, res) => {
+  try {
+    const newComment = await Comment.create({
+      content: req.body.content,
+      parent: req.params.id,
+      author: req.session.user_id,
+      time: Date.now(),
+    });
+    res.status(200).json(newComment);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
+
+
 router.get('/:id', async (req, res) => {
   try {
     const postInfo = await Post.findByPk(req.params.id, {

@@ -3,7 +3,6 @@ const cancelButton = document.querySelector('#cancel-button');
 
 const newPostHandler = async (event) => {
   event.preventDefault();
-  alert('AAAAAAAAAAAAA');
   const title = document.querySelector('#post-title').value.trim();
   const content = document.querySelector('#post-content').value.trim();
 
