@@ -26,6 +26,12 @@ const cancelHandler = async (event) => {
   document.location.replace('/');
 };
 
-document.querySelector('.submit-group').addEventListener('submit', newPostHandler);
+document.querySelector('.submit-group').addEventListener('submit', function(event){
+  event.preventDefault();
+  newPostHandler(event);
+});
 
-document.querySelector('.cancel-group').addEventListener('submit', cancelHandler);
+document.querySelector('.cancel-group').addEventListener('submit', function(event){
+  event.preventDefault();
+  cancelHandler(event);
+});
