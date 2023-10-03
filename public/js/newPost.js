@@ -1,4 +1,5 @@
-console.log("fuck");
+console.log("are you slapping")
+
 const newPostHandler = async (event) => {
   event.preventDefault();
   const title = document.querySelector('#post-title').value.trim();
@@ -21,14 +22,9 @@ const newPostHandler = async (event) => {
 };
 const cancelHandler = async (event) => {
   event.preventDefault();
-
   document.location.replace('/');
 };
 
-document
-  .querySelector('.submit-group')
-  .addEventListener('submit', newPostHandler);
+document.querySelector('.submit-group').addEventListener('submit', newPostHandler);
 
-document
-.querySelector('.cancel-group')
-.addEventListener('submit', cancelHandler);
+document.querySelector('.cancel-group').addEventListener('submit', cancelHandler);
