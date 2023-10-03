@@ -5,8 +5,9 @@ const newCommentHandler = async (event) => {
 
   const id = document.querySelector('#id').value;
   const content = document.querySelector('#comment-content').value.trim();
-
+  console.log("trying to leave a comment")
   if (id && content) {
+    console.log("and we did it!!")
     const response = await fetch('/api/post/newComment/'+id, {
       method: 'POST',
       body: JSON.stringify({ 
@@ -17,7 +18,7 @@ const newCommentHandler = async (event) => {
     if (response.ok) {
       document.location.replace('/');
     } else {
-      alert('Failed to create post');
+      alert('Failed to create comment');
     }
   }
 };
