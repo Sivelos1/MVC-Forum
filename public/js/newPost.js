@@ -2,7 +2,7 @@ console.log("are you slapping")
 
 const newPostHandler = async (event) => {
   event.stopImmediatePropagation();
-  console.log("is this working please ffs");
+  alert('AAAAAAAAAAAAA');
   const title = document.querySelector('#post-title').value.trim();
   const content = document.querySelector('#post-content').value.trim();
 
