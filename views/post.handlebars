@@ -29,8 +29,7 @@
             </div>
         </form>
         {{/if}}
-        {{#if show_comments}}
-            {{#each comments as |comment| }}
+        {{#each comments as |comment| }}
             <div class="row align-center mb-5">
                 <div class="col-md-6">
                     <p>{{comment.content}}</p>
@@ -43,7 +42,6 @@
                 </div>
             </div>
             {{/each}}
-        {{/if}}
     </div>
 </div>
 
