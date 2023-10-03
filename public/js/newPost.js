@@ -1,3 +1,4 @@
+console.log("fuck");
 const newPostHandler = async (event) => {
   event.preventDefault();
   console.log("we prevented the default my boy")
