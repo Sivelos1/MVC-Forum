@@ -7,13 +7,13 @@
 {{#if posts}}
   {{#each posts as |post| }}
   <div class="row align-center mb-5">
-    <a>
-      <div>
+    <a href = "./posts/"+{{post.id}}>
+      <div style = "background-color: gray; text-color: black;">
         <div style = "display: flex; justify-content: space-between">
           <h2>{{post.title}}</h2>
           <div>{{post.time}}</div>
         </div>
-        <p>{{post.content}}</p>
+        <p style = "background-color: white;">{{post.content}}</p>
       </div>
     </a>
   </div>
