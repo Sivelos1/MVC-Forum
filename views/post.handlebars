@@ -31,13 +31,12 @@
         {{/if}}
         {{#each comments as |comment| }}
             <div class="row align-center mb-5">
-                <div class="col-md-6">
-                    <p>{{comment.content}}</p>
+                <div class="col-md-6" style = "background-color: lightgray; padding: 1rem">
+                    <p style = "background-color: white; padding: 1rem">{{comment.content}}</p>
                     <div style = "display:flex; justify-content: space-between">
                         <div>
                             {{comment.author}}
                         </div>
-
                     </div>
                 </div>
             </div>
