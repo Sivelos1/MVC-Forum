@@ -1,11 +1,9 @@
 const commentBox = document.querySelector('.comment-box');
 
-console.log(location.search);
-
 const newCommentHandler = async (event) => {
   event.preventDefault();
 
-  const id = 1;
+  const id = document.querySelector('#id').value.trim();
   const content = document.querySelector('#comment-content').value.trim();
 
   if (id && content) {
