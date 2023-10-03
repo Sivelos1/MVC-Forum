@@ -1,3 +1,6 @@
+const newPostButton = document.querySelector('#submit-button');
+const cancelButton = document.querySelector('#cancel-button');
+
 const newPostHandler = async (event) => {
   event.preventDefault();
   alert('AAAAAAAAAAAAA');
@@ -24,12 +27,12 @@ const cancelHandler = async (event) => {
   document.location.replace('/');
 };
 
-document.querySelector('.submit-group').addEventListener('submit', function(event){
+newPostButton.addEventListener('click', function(event){
   event.preventDefault();
   newPostHandler(event);
 });
 
-document.querySelector('.cancel-group').addEventListener('submit', function(event){
+cancelButton.addEventListener('click', function(event){
   event.preventDefault();
   cancelHandler(event);
 });
