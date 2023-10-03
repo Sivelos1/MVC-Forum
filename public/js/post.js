@@ -3,7 +3,7 @@ const commentBox = document.querySelector('.comment-box');
 const newCommentHandler = async (event) => {
   event.preventDefault();
 
-  const id = document.querySelector('#id').value.trim();
+  const id = document.querySelector('#id').value;
   const content = document.querySelector('#comment-content').value.trim();
 
   if (id && content) {
