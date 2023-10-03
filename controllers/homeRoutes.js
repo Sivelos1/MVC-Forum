@@ -38,6 +38,29 @@ router.get('/newPost', withAuth, async (req, res) => {
   }
 });
 
+router.get('/posts/:id', withAuth, async (req, res) => {
+  const postInfo = await Post.findByPk(req.params.id, {
+    include: [
+      {
+        model: Comment
+      },
+    ],
+  })
+  if(postInfo){
+    res.render('homepage', {
+      postInfo,
+      is_on_dashboard: true,
+      is_users_post: (postInfo.author === req.session.user_id),
+      show_comments: true,
+      logged_in: req.session.logged_in,
+    });
+    res.status(200).json(postInfo);
+  }
+  else{
+    res.status(500).json({message: 'Could not find a post with that id!'});
+  }
+});
+
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
     res.redirect('/');

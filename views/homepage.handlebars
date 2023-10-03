@@ -6,7 +6,7 @@
 <div style = "display: flex; flex-direction: column;">
 {{#if posts}}
   {{#each posts as |post| }}
-  <div id = "{{post.id}}" class="posts row align-center mb-5">
+  <a href = "/posts/{{post.id}}" class="posts row align-center mb-5">
     <div style = "background-color: lightgray; padding: 1rem; border-radius: 1rem;">
       <div style = "text-color: black;">
         <div style = "display: flex; justify-content: space-between">
@@ -17,7 +17,7 @@
         <div>By Author Name</div>
       </div>
     </div>
-  </div>
+  </a>
   {{/each}}
 {{else}}
   <div class = "p-5" style = "border-radius: 1rem; display:flex; justify-content:center">

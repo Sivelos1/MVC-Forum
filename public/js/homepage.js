@@ -7,21 +7,3 @@ const makeNewPostHandler = async (event) => {
 };
 
 newPostButton.addEventListener('submit', makeNewPostHandler);
-
-const postList = document.querySelectorAll('.posts');
-
-postList.forEach(element => {
-  element.addEventListener('click', function(event){
-    event.preventDefault();
-    const response = fetch('/api/post/'+element.id,
-    {
-      method: 'GET',
-    });
-    if(response.ok){
-      document.location.replace('/');
-    }
-    else{
-      alert('Couldn\'t find post');
-    }
-  })
-});
