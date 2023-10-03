@@ -45,14 +45,15 @@ router.get('/posts/:id', withAuth, async (req, res) => {
         model: Comment,
       },
     ],
-  })
-  if(postInfo){
-    const comments = await Comment.findAll({where: {
-      id: req.params.id
-    }})
+  });
+  
+  const commentInfo = await Comment.findAll({where: {
+    id: req.params.id
+  }})
+  if(postInfo && commentInfo){
     res.render('post', {
       post: postInfo.get({ plain: true }),
-      comments: comments.get({plain: true}),
+      comments: commentInfo.map((comment) => comment.get({plain: true})),
       is_on_dashboard: true,
       is_users_post: (postInfo.author === req.session.user_id),
       show_comments: true,
