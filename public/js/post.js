@@ -1,6 +1,6 @@
 const commentBox = document.querySelector('.comment-box');
 
-console.log(location.href);
+console.log(location.search);
 
 const newCommentHandler = async (event) => {
   event.preventDefault();
