@@ -12,6 +12,7 @@ const newPostHandler = async (event) => {
     });
 
     if (response.ok) {
+      console.log("please")
       document.location.replace('/');
     } else {
       alert('Failed to create post');
