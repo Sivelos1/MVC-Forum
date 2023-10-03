@@ -5,7 +5,7 @@ const newCommentHandler = async (event) => {
 
   const id = document.querySelector('#id').value;
   const content = document.querySelector('#comment-content').value.trim();
-  console.log("trying to leave a comment")
+  console.log(id + '/' + content)
   if (id && content) {
     console.log("and we did it!!")
     const response = await fetch('/api/post/newComment/'+id, {
